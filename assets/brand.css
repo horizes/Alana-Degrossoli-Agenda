@@ -1,0 +1,376 @@
+/* Alana Degrossoli — cores observadas nas publicações oficiais. */
+.alana-agenda {
+  --cream: #36282b;
+  --ink: #faf6f2;
+  --panel: #fffdfa;
+  --panel-2: #f3ece7;
+  --field: #fffdfa;
+  --rule: #e8ddd7;
+  --gold: #843c4c;
+  --gold-hi: #6e2634;
+  --muted: #776b68;
+  margin: 0;
+  background: #faf6f2;
+  color: #36282b;
+}
+.agenda-shell-header,
+.alana-agenda.agenda-page .agenda-public-brand {
+  background: #faf6f2;
+  border-bottom: 1px solid #e8ddd7;
+}
+.agenda-shell-header img {
+  width: 268px;
+  height: 50px;
+}
+.agenda-shell-product {
+  color: #776b68;
+  border-color: #d8c7c0;
+}
+.agenda-guide-link,
+.agenda-guide-link:hover {
+  color: #6e2634;
+}
+.agenda-login {
+  max-width: 1190px;
+  gap: 90px;
+  align-items: center;
+  margin: 52px auto;
+}
+.agenda-login-intro .page-eyebrow {
+  color: #843c4c;
+  letter-spacing: 0.14em;
+  font-size: 9px;
+}
+.agenda-login-intro h1 {
+  color: #36282b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(50px, 5.2vw, 73px);
+  font-weight: 400;
+  letter-spacing: -2.5px;
+  line-height: 1.06;
+  margin: 22px 0 24px;
+}
+.agenda-login-intro h1 em {
+  color: #843c4c;
+  font-weight: 400;
+}
+.agenda-login-intro > p:not(.page-eyebrow) {
+  color: #776b68;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.agenda-patient-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 16px;
+  min-height: 44px;
+  color: #6e2634;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #c59ba3;
+}
+.agenda-patient-link:hover {
+  border-bottom-color: #6e2634;
+}
+.alana-hero-line {
+  display: none;
+}
+.agenda-login-tags {
+  gap: 20px;
+  margin: 3px 0 27px;
+}
+.agenda-login-tags > span {
+  color: #776b68;
+  font-size: 9px;
+}
+.agenda-login-tags .alana-icon {
+  color: #843c4c;
+}
+.agenda-professional {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-top: 21px;
+  border-top: 1px solid #e8ddd7;
+  max-width: 440px;
+}
+.agenda-professional img {
+  width: 77px;
+  height: 90px;
+  object-fit: cover;
+  object-position: 50% 24%;
+  border-radius: 38px 38px 4px 4px;
+}
+.agenda-professional strong {
+  display: block;
+  color: #6e2634;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.agenda-professional span,
+.agenda-professional a {
+  display: block;
+  color: #776b68;
+  font-size: 10px;
+  line-height: 1.9;
+}
+.agenda-professional a {
+  text-underline-offset: 3px;
+}
+.agenda-brand-values {
+  margin-top: 22px;
+  color: #93827e;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+.agenda-brand-values span {
+  margin: 0 5px;
+  color: #843c4c;
+}
+.agenda-login-card {
+  background: #fffdfa;
+  border-color: #e8ddd7;
+  box-shadow: 0 14px 45px #6e26340a;
+  border-radius: 12px;
+  padding: 36px;
+}
+.agenda-login-card h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #36282b;
+  letter-spacing: -0.8px;
+}
+.agenda-login-card input:not([type="checkbox"]) {
+  background: #fffdfa;
+  color: #36282b;
+  border-color: #d8c7c0;
+}
+.agenda-login-card input:not([type="checkbox"]):focus {
+  border-color: #843c4c;
+  box-shadow: 0 0 0 3px #843c4c14;
+}
+.agenda-login-card .agenda-remember,
+.agenda-login-contact {
+  color: #776b68;
+}
+.agenda-login-contact {
+  border-color: #e8ddd7;
+}
+.agenda-login-card :disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.agenda-setup-note {
+  margin-top: 18px;
+  color: #776b68;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.agenda-shell-footer {
+  background: #faf6f2;
+  color: #776b68;
+  border-color: #e8ddd7;
+}
+.agenda-shell-footer a {
+  color: #6e2634;
+}
+.alana-agenda.agenda-page {
+  background: #faf6f2;
+  --agenda-public-muted: #776b68;
+}
+.alana-agenda.agenda-page .agenda-public-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: 25px max(24px, calc((100vw - 1040px) / 2));
+  min-height: 105px;
+}
+.alana-agenda.agenda-page .agenda-public-brand .agenda-public-logo {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+}
+.agenda-public-team {
+  color: #6e2634;
+  font-size: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  min-height: 44px;
+}
+.agenda-page .agenda-intro h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4.6vw, 55px);
+  font-weight: 400;
+  color: #6e2634;
+  letter-spacing: -1.5px;
+}
+.agenda-page .agenda-intro p:not(.page-eyebrow):not(.agenda-profile-public) {
+  font-size: 14px;
+  max-width: 590px;
+}
+.agenda-page .agenda-form-heading h2,
+.agenda-contact-card h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #36282b;
+}
+.agenda-page .agenda-card {
+  background: #fffdfa;
+  border-color: #e8ddd7;
+  border-top-color: #843c4c;
+  box-shadow: 0 10px 35px #6e263405;
+}
+.agenda-page .agenda-card input:not([type="checkbox"]):not([type="radio"]),
+.agenda-page .agenda-card select {
+  background: #fffdfa;
+  border-color: #d8c7c0;
+}
+.agenda-contact-card {
+  background: #fffdfa;
+  border: 1px solid #e8ddd7;
+  border-radius: 12px;
+  padding: 36px;
+  margin: 24px 0;
+}
+.agenda-contact-card h2 {
+  margin: 0 0 12px;
+}
+.agenda-contact-card p {
+  color: #776b68;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 580px;
+  margin: 0 0 24px;
+}
+.alana-agenda .agenda-callback-logo {
+  background: none;
+  width: 300px;
+  padding: 16px 0;
+}
+.agenda-guide h1 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  color: #6e2634;
+  font-weight: 400;
+}
+.agenda-guide .agenda-card {
+  background: #fffdfa;
+  border-color: #e8ddd7;
+}
+.agenda-offline-page {
+  background: #faf6f2;
+}
+@media (max-width: 950px) {
+  .agenda-login {
+    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+  }
+  .agenda-login-intro h1 {
+    font-size: 57px;
+  }
+  .agenda-login-tags {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+@media (max-width: 720px) {
+  .agenda-shell-header img {
+    width: 220px;
+    height: 36px;
+  }
+  .agenda-shell-header {
+    padding: 17px 20px;
+    gap: 10px;
+    min-height: 77px;
+  }
+  .agenda-guide-link {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .agenda-login {
+    display: block;
+    max-width: 480px;
+    padding: 0 22px;
+    margin: 30px auto 38px;
+  }
+  .agenda-login-intro h1 {
+    font-size: 54px;
+    letter-spacing: -2px;
+    margin-top: 16px;
+  }
+  .agenda-login-intro > p:not(.page-eyebrow) {
+    font-size: 12px;
+  }
+  .agenda-professional {
+    padding-top: 15px;
+  }
+  .agenda-professional img {
+    width: 57px;
+    height: 67px;
+  }
+  .agenda-professional strong {
+    font-size: 18px;
+  }
+  .agenda-brand-values {
+    font-size: 7px;
+    letter-spacing: 0.07em;
+    margin-top: 15px;
+  }
+  .agenda-login-card {
+    padding: 27px 24px;
+  }
+  .agenda-login-card h2 {
+    font-size: 28px;
+  }
+  .alana-agenda.agenda-page .agenda-public-brand {
+    padding: 19px;
+    gap: 13px;
+    min-height: 90px;
+  }
+  .alana-agenda.agenda-page .agenda-public-brand .agenda-public-logo {
+    width: 235px;
+  }
+  .agenda-public-team {
+    font-size: 9px;
+    white-space: normal;
+    max-width: 70px;
+    line-height: 1.6;
+  }
+  .agenda-public-team .alana-icon {
+    display: none;
+  }
+  .agenda-page .agenda-intro h1 {
+    font-size: 37px;
+  }
+  .agenda-contact-card {
+    padding: 25px 20px;
+  }
+  .agenda-contact-card h2 {
+    font-size: 26px;
+  }
+  .agenda-contact-card .button {
+    width: 100%;
+  }
+  .agenda-guide h1 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 390px) {
+  .agenda-shell-header img {
+    width: 190px;
+  }
+  .agenda-login-intro h1 {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; base-uri 'none'; object-src 'none'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="apple-mobile-web-app-title" content="Alana Agenda" />
+    <link rel="manifest" href="app.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>Alana Agenda | Guia da equipe</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/brand.css" />
+    <meta name="theme-color" content="#6E2634" />
+  </head>
+  <body class="alana-agenda agenda-portal">
+    <header class="agenda-shell-header">
+      <a href="./" aria-label="Voltar à agenda"
+        ><img src="brand/alana-logo.svg" alt="Alana Degrossoli" /></a
+      ><span class="agenda-shell-product">GUIA DA AGENDA</span
+      ><a class="agenda-guide-link" href="./"
+        ><span data-alana-icon="chevron-left"></span>Voltar à agenda</a
+      >
+    </header>
+    <main class="agenda-guide">
+      <p class="page-eyebrow">USO INTERNO · EQUIPE ALANA</p>
+      <h1>Uma agenda organizada.<br />Um cuidado de cada vez.</h1>
+      <p>
+        Orientações para a equipe preparar os horários e acompanhar os
+        atendimentos. Os pacientes recebem apenas o link público para escolher o
+        horário.
+      </p>
+      <section class="agenda-card">
+        <h2>Antes de começar</h2>
+        <p>
+          Esta nova versão mantém a interface e o contrato de dados da Solvex. O
+          acesso da equipe, os horários, as reservas, os e-mails e a integração
+          Google dependem da implantação de um backend separado. Até essa
+          configuração, a página pública direciona o paciente ao WhatsApp de
+          agendamento.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>1. Acesso e agendas da equipe</h2>
+        <p>
+          Entre com sua conta da equipe da Alana. A agenda tem uma sessão
+          própria. Marque <strong>Manter conectado</strong> se quiser preservar
+          essa sessão.
+        </p>
+        <p>
+          O seletor <strong>Agenda do perfil</strong> mostra as agendas que sua
+          conta pode gerenciar. Cada pessoa possui seus horários, consultas,
+          conexão Google e link de agendamento. O proprietário pode administrar
+          as agendas da equipe; os demais perfis autorizados administram a
+          própria agenda.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>2. Prepare a disponibilidade</h2>
+        <ol>
+          <li>
+            Abra <strong>Configurações</strong>. Confira o nome do responsável,
+            a antecedência mínima, o endereço presencial e o acesso da consulta
+            online.
+          </li>
+          <li>
+            Abra <strong>Disponibilidade</strong>. Escolha a duração de cada
+            consulta, ative os dias da semana e defina as faixas de atendimento,
+            os formatos permitidos e o intervalo entre consultas.
+          </li>
+          <li>
+            Salve a rotina. A duração e os horários são atualizados juntos e
+            passam a valer nas semanas seguintes. Consultas confirmadas e
+            horários extras existentes mantêm a duração original.
+          </li>
+          <li>
+            Ative a agenda quando estiver pronta e use
+            <strong>Copiar link público</strong> para enviar o endereço aos
+            pacientes.
+          </li>
+        </ol>
+        <p>
+          Os horários seguem Brasília. Alterações nas configurações preservam os
+          detalhes das consultas já confirmadas.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>3. Dias especiais e reservas internas</h2>
+        <p>
+          Na aba <strong>Calendário</strong>, selecione um dia para abrir
+          horários extras, reservar um intervalo para uso interno ou fechar o
+          dia inteiro. Essas ações não cancelam consultas já confirmadas.
+        </p>
+        <p>
+          Os horários extras servem para exceções à rotina. Para reabrir um
+          intervalo reservado, use <strong>Liberar</strong> no item
+          correspondente.
+        </p>
+        <p>
+          Uma consulta online ocupa seu intervalo. Uma reserva presencial ocupa
+          a manhã ou a tarde inteira, para permitir deslocamentos. O início e a
+          duração da consulta continuam sendo os horários escolhidos pelo
+          paciente.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>4. Acompanhe os atendimentos</h2>
+        <p>
+          Escolha o dia no calendário para consultar as consultas. Abra
+          <strong>Contato e detalhes</strong> para ver tipo de consulta, e-mail,
+          telefone, observações e protocolo. Os botões permitem abrir o
+          WhatsApp, entrar na consulta, verificar o Meet e cancelar ou concluir
+          o atendimento.
+        </p>
+        <p>
+          O cancelamento libera a disponibilidade conforme a rotina e os
+          bloqueios existentes. A opção <strong>Concluir</strong> fica
+          disponível depois do início da consulta.
+        </p>
+        <p>
+          Se houver falha ao confirmar um agendamento, o paciente deve usar
+          <strong>Verificar e recuperar esta tentativa</strong>. Isso evita
+          criar uma segunda reserva.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>5. Google Agenda e Meet</h2>
+        <p>
+          A equipe técnica configura a credencial OAuth e a URL de retorno
+          diretamente no servidor. Esses dados não podem ser importados ou
+          editados pelos painéis.
+        </p>
+        <p>
+          O responsável de cada agenda usa
+          <strong>Conectar minha conta Google, em Configurações</strong> e
+          autoriza a própria conta no Google. A integração utiliza a agenda
+          principal dessa conta. Ative o Meet automático para gerar uma sala por
+          nova consulta online.
+        </p>
+        <p>
+          A sincronização confere periodicamente os compromissos do Google,
+          incluindo recorrências e eventos de dia inteiro, e ocupa esses
+          horários na agenda do site. Consultas presenciais, reservas internas e
+          dias bloqueados também são enviados ao Google. O site nunca publica o
+          título ou os detalhes de compromissos particulares na página de
+          reservas.
+        </p>
+        <p>
+          Uma alteração de horário ou cancelamento de consulta vinculada feita
+          no Google volta para o site na próxima conferência. Disponibilidades e
+          bloqueios criados pela equipe são administrados no site. Se o Google
+          estiver indisponível ou a autorização expirar, os dados importados são
+          preservados; a equipe deve reconectar antes de liberar novas reservas
+          sem conferência.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>6. Confirmações por e-mail</h2>
+        <p>
+          O envio depende de um remetente e serviço de e-mail configurados pela
+          implantação da agenda Alana. O e-mail de login e a confirmação de
+          consultas são configurações separadas.
+        </p>
+        <p>
+          Quando o envio estiver ativado, o paciente recebe os detalhes, o
+          acesso da consulta quando disponível e um arquivo de calendário. O
+          painel mostra o estado do envio e oferece o reenvio quando permitido.
+        </p>
+        <p>
+          <strong>Envio aceito</strong> indica aceite pelo serviço, sem garantir
+          leitura. Se o resultado estiver incerto, confira o envio antes de
+          tentar novamente. O sistema evita reenvios automáticos que possam
+          duplicar mensagens.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>7. O paciente precisa configurar alguma coisa?</h2>
+        <p>
+          Não. A equipe prepara a agenda e envia o link específico do
+          responsável. O paciente escolhe o formato, o dia e o horário, informa
+          os dados e confirma. Ele também pode adicionar a consulta ao próprio
+          calendário.
+        </p>
+        <p>
+          Se não houver horários, a equipe deve conferir se a agenda está ativa,
+          a rotina foi salva, a antecedência mínima permite o agendamento e não
+          há bloqueios ou reservas ocupando o período.
+        </p>
+      </section>
+      <section class="agenda-card">
+        <h2>8. No celular e como aplicativo</h2>
+        <p>
+          Use <strong>Instalar aplicativo</strong> no rodapé para adicionar a
+          agenda Alana à tela inicial. No iPhone ou iPad, abra o site no Safari,
+          toque no menu de compartilhamento e escolha
+          <strong>Adicionar à Tela de Início</strong>. No Android, use a
+          instalação oferecida pelo navegador.
+        </p>
+        <p>
+          O aplicativo precisa de internet para consultar a disponibilidade,
+          salvar alterações e confirmar consultas. Sem conexão, o guia continua
+          disponível após a primeira abertura online. Nenhuma reserva é enviada
+          automaticamente mais tarde.
+        </p>
+        <p>
+          Para manter o acesso após fechar o aplicativo, marque
+          <strong>Manter conectado</strong> ao entrar. A conexão Google é
+          iniciada pelo próprio painel. Se o navegador interromper a
+          autorização, reabra a agenda Alana no mesmo navegador e inicie a
+          conexão novamente.
+        </p>
+      </section>
+    </main>
+    <footer class="agenda-shell-footer">
+      Alana Degrossoli · Guia interno da agenda.
+    </footer>
+    <script src="config.js" defer></script>
+    <script src="assets/icons.js" defer></script>
+    <script src="assets/pwa.js" defer></script>
+    <script src="assets/setup.js" defer></script>
+  </body>
+</html>

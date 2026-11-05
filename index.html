@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; worker-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.supabase.co; base-uri 'none'; object-src 'none'; form-action 'self'; upgrade-insecure-requests"
+    />
+    <meta name="apple-mobile-web-app-title" content="Alana Agenda" />
+    <link rel="manifest" href="app.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#6E2634" />
+    <meta
+      name="description"
+      content="Agenda de consultas de Alana Degrossoli, nutricionista funcional. Atendimento online e presencial."
+    />
+    <title>Alana Degrossoli | Agenda de consultas</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/brand.css" />
+  </head>
+  <body class="alana-agenda agenda-portal">
+    <a class="skip-link" href="#agenda-root">Ir para a agenda</a>
+    <header class="agenda-shell-header">
+      <a href="./" aria-label="Alana Agenda"
+        ><img src="brand/alana-logo.svg" alt="Alana Degrossoli" /></a
+      ><span class="agenda-shell-product">AGENDA DE CONSULTAS</span
+      ><a
+        class="agenda-guide-link"
+        href="manual.html"
+        target="_blank"
+        rel="noopener"
+        >Guia da equipe <span data-alana-icon="arrow-up-right"></span
+      ></a>
+      <div id="agenda-account" hidden>
+        <span id="agenda-account-name"></span
+        ><button class="button secondary" id="agenda-signout" type="button">
+          Sair
+        </button>
+      </div>
+    </header>
+    <main id="agenda-login" class="agenda-login">
+      <section class="agenda-login-intro">
+        <p class="page-eyebrow">NUTRIÇÃO FUNCIONAL · ALANA DEGROSSOLI</p>
+        <h1>O resultado<br />começa na <em>raiz.</em></h1>
+        <p>
+          Cuidado que respeita sua história, seus objetivos<br />e o seu tempo.
+          Uma consulta de cada vez.
+        </p>
+        <a class="agenda-patient-link" href="agenda.html"
+          >Quero agendar minha consulta
+          <span data-alana-icon="arrow-up-right"></span
+        ></a>
+        <div class="alana-hero-line" aria-hidden="true"></div>
+        <div class="agenda-login-tags">
+          <span
+            ><span data-alana-icon="calendar"></span>Horários organizados</span
+          ><span><span data-alana-icon="video"></span>Online e presencial</span
+          ><span><span data-alana-icon="clock"></span>Google Agenda</span>
+        </div>
+        <div class="agenda-professional">
+          <img
+            src="brand/alana-retrato.jpg"
+            alt="Alana Degrossoli, nutricionista funcional"
+            width="92"
+            height="112"
+          />
+          <div>
+            <strong>Alana Degrossoli</strong><span>Nutricionista Funcional</span
+            ><a
+              href="https://www.instagram.com/alanadegrossoli/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >@alanadegrossoli</a
+            >
+          </div>
+        </div>
+        <div class="agenda-brand-values">
+          EMAGRECIMENTO <span>·</span> PERFORMANCE <span>·</span> LONGEVIDADE
+        </div>
+      </section>
+      <section class="agenda-login-card">
+        <div id="agenda-login-loading" role="status">
+          Verificando seu acesso…
+        </div>
+        <div id="agenda-login-fields" hidden>
+          <p class="page-eyebrow">ÁREA DA NUTRICIONISTA</p>
+          <h2>Entre na sua agenda.</h2>
+          <p>Acesse seus horários e acompanhe os atendimentos.</p>
+          <form id="agenda-login-form">
+            <label
+              >E-mail<input
+                type="email"
+                name="email"
+                autocomplete="username"
+                placeholder="seuemail@consultorio.com.br"
+                required
+                maxlength="254" /></label
+            ><label
+              >Senha<span class="agenda-password-wrap"
+                ><input
+                  type="password"
+                  name="password"
+                  autocomplete="current-password"
+                  placeholder="Digite sua senha"
+                  required
+                  maxlength="128" /><button
+                  type="button"
+                  id="agenda-password-toggle"
+                  aria-label="Mostrar senha"
+                  aria-pressed="false"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg></button></span></label
+            ><label class="agenda-remember"
+              ><input type="checkbox" name="remember" />Manter conectado</label
+            ><button class="button primary" type="submit">
+              Acessar agenda <span data-alana-icon="arrow-right"></span>
+            </button>
+            <p class="error" id="agenda-login-error" role="alert"></p>
+          </form>
+          <p class="agenda-login-contact">
+            Acesso reservado à Alana e à equipe do consultório.
+          </p>
+        </div>
+      </section>
+    </main>
+    <main
+      id="agenda-root"
+      class="agenda-standalone-root"
+      hidden
+      tabindex="-1"
+    ></main>
+    <footer class="agenda-shell-footer">
+      <span>© Alana Degrossoli · Nutricionista Funcional</span
+      ><span>O resultado começa na raiz.</span
+      ><a href="privacidade-agenda.html">Privacidade</a>
+    </footer>
+    <script src="config.js" defer></script>
+    <script src="assets/icons.js" defer></script>
+    <script src="assets/auth.js" defer></script>
+    <script src="assets/api.js" defer></script>
+    <script src="assets/categories.js" defer></script>
+    <script src="assets/weekly.js" defer></script>
+    <script src="assets/google-flow.js" defer></script>
+    <script src="assets/admin.js" defer></script>
+    <script src="assets/portal.js" defer></script>
+    <script src="assets/pwa.js" defer></script>
+    <script src="assets/setup.js" defer></script>
+  </body>
+</html>
