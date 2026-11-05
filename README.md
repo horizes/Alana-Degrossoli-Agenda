@@ -16,7 +16,11 @@ Rotina: segunda a sexta, das 8h às 12h e das 14h às 18h, duração de 60 minut
 
 Mantém calendário mensal, disponibilidade semanal, horários extras, bloqueios, reservas internas, reserva pública, recuperação da mesma tentativa, confirmação com protocolo e exportação de calendário. A regra da Solvex para atendimento presencial ocupa manhã ou tarde; consulte o manual.
 
-Google Agenda/Meet e confirmação por e-mail têm o mesmo suporte de integração da base. A conta Google e o remetente ainda precisam ser configurados para esta agenda. Até isso ocorrer, o protocolo na página é a confirmação e o acesso online pode ser combinado com a equipe ou configurado manualmente. O endereço presencial deve ser conferido nas configurações antes do uso real.
+Google Agenda/Meet usa o cliente OAuth Calend, com a URL de retorno desta agenda cadastrada. O Calend está externo e em produção: o responsável pode usar **Configurações → Conectar minha conta Google** e escolher a própria conta, sem cadastro como usuário de teste. A autorização final é feita pelo titular no Google. Depois de conectar, ative o Meet automático para novas consultas online. O Google mantém o limite de 100 autorizações para escopos não verificados; a verificação é necessária para remover esse limite.
+
+A credencial OAuth fica somente no servidor. A aplicação pode reutilizar a credencial Calend da infraestrutura, mas mantém os tokens e os dados das contas conectadas exclusivos da agenda Alana. Nenhuma conta Google é vinculada automaticamente.
+
+O remetente de e-mail ainda precisa ser configurado. Até isso ocorrer, o protocolo na página é a confirmação. O endereço presencial deve ser conferido nas configurações antes do uso real.
 
 ## Desenvolvimento
 
@@ -29,3 +33,4 @@ python -m http.server 8080
 Após alterar os arquivos públicos, execute `node scripts/release.mjs` para atualizar o cache offline. Nunca publique chaves secretas, senhas ou credenciais OAuth em `config.js`.
 
 [Manual](manual.html) · [Privacidade](privacidade-agenda.html) · [Uso da agenda](termos-agenda.html) · [Origem da marca](brand/README.md)
+
