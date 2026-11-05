@@ -1,5 +1,5 @@
 "use strict";
-const VERSION='226a1a598c6e',
+const VERSION='48b816478bd7',
   PREFIX = "alana-agenda-static-",
   CACHE = PREFIX + VERSION;
 const FILES = [
@@ -15,6 +15,7 @@ const FILES = [
   "montserrat.woff2",
   "app.webmanifest",
   "brand/alana-logo.svg",
+  "brand/alana-monograma.svg",
   "favicon.svg",
   "app-icon-192.png",
   "app-icon-512.png",

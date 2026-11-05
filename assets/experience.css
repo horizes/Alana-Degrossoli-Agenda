@@ -1113,3 +1113,49 @@
     width: 100%;
   }
 }
+
+/* Marca oficial: monograma AD, folha e assinatura da publicação fornecida. */
+.agenda-shell-header {
+  min-height: 124px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.agenda-shell-header img {
+  display: block;
+  width: 172px;
+  height: 100px;
+  object-fit: contain;
+  object-position: left center;
+}
+.alana-agenda.agenda-page .agenda-public-brand {
+  min-height: 124px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.alana-agenda.agenda-page .agenda-public-brand .agenda-public-logo {
+  width: 172px;
+  height: 100px;
+  object-fit: contain;
+  object-position: left center;
+}
+.alana-agenda .agenda-callback-logo {
+  display: block;
+  width: 210px;
+  height: auto;
+  padding: 0;
+  margin: 0 0 24px;
+  background: none;
+}
+@media (max-width: 720px) {
+  .agenda-shell-header,
+  .alana-agenda.agenda-page .agenda-public-brand {
+    min-height: 109px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .agenda-shell-header img,
+  .alana-agenda.agenda-page .agenda-public-brand .agenda-public-logo {
+    width: 146px;
+    height: 85px;
+  }
+}

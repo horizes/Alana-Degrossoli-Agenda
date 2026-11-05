@@ -5,9 +5,9 @@ Referência: [perfil oficial de Alana Degrossoli](https://www.instagram.com/alan
 - Vinho: `#6E2634` e `#843C4C`.
 - Creme: `#FAF6F2`; superfícies: `#FFFDFA`.
 - A paleta foi aproximada visualmente a partir das publicações. Não substitui um manual oficial de marca.
-- `alana-logo.svg` preserva os pixels da assinatura “ALANA DEGROSSOLI · NUTRICIONISTA FUNCIONAL” no rodapé da [publicação de 3 de novembro de 2026](https://www.instagram.com/alanadegrossoli/p/DfR-IYDEfY7/). O SVG contém a imagem original e enquadra apenas a assinatura. Não é um arquivo vetorial original da marca; pode ser substituído pelo arquivo mestre quando disponível.
+- `alana-logo.svg`: monograma AD com folha e assinatura “ALANA DEGROSSOLI · NUTRIÇÃO FUNCIONAL”, extraídos da [publicação indicada pela cliente](https://www.instagram.com/alanadegrossoli/p/Deb_qcMxojD/). Os contornos foram derivados da imagem de 1365 × 1820 px, preservando o desenho e a posição dos elementos, com fundo transparente. É uma extração da publicação, não o arquivo mestre original da marca.
 - `alana-retrato.jpg`: capa de [publicação do Studio Essenza no perfil](https://www.instagram.com/studioessenzza/reel/DcMcfvViKFP/). O enquadramento é feito por CSS, sem retoque da fotografia.
-- Os ícones de instalação usam a inicial tipográfica “A”. São ícones de navegação do aplicativo.
+- `alana-monograma.svg`, favicon e ícones de instalação usam o monograma AD extraído dessa mesma imagem. A cor da tinta foi amostrada na própria marca (`#8C4F49`); a paleta do restante do site foi mantida.
 
 O WhatsApp `+55 19 99811-7117` foi conferido nos links de consultas presenciais e online do [Linktree oficial](https://linktr.ee/alanadegrossoli).
 
