@@ -10,3 +10,5 @@ Referência: [perfil oficial de Alana Degrossoli](https://www.instagram.com/alan
 - Os ícones de instalação usam a inicial tipográfica “A”. São ícones de navegação do aplicativo.
 
 O WhatsApp `+55 19 99811-7117` foi conferido nos links de consultas presenciais e online do [Linktree oficial](https://linktr.ee/alanadegrossoli).
+
+Tipografia revisada: Alegreya nos títulos e Lato nos textos e controles. As fontes são locais, com licenças OFL em `fonts/`.

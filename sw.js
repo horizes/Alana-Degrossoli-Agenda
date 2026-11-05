@@ -1,8 +1,12 @@
 "use strict";
-const VERSION='ab1557024f53',
+const VERSION='4d4bd208c718',
   PREFIX = "alana-agenda-static-",
   CACHE = PREFIX + VERSION;
 const FILES = [
+  "fonts/alegreya-italic.woff2",
+  "fonts/alegreya-regular.woff2",
+  "fonts/lato-bold.woff2",
+  "fonts/lato-regular.woff2",
   "offline.html",
   "manual.html",
   "privacidade-agenda.html",
