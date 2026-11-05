@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   let j = null;
-  const le = `<div class="alana-agenda agenda-admin-native"><header class="agenda-native-header"><h1>Agenda</h1><p class="mod-sub">Organize os horários de atendimento e acompanhe as consultas online e presenciais.</p></header><section id="agenda-section"><div id="agenda-profile-bar" class="agenda-profile-bar" hidden><label>Agenda do perfil<select id="agenda-profile-select" aria-describedby="agenda-profile-note"></select></label><p id="agenda-profile-note" class="agenda-hint" role="status"></p></div><div class="agenda-toolbar"><div class="agenda-toolbar-state"><span id="agenda-open-dot" class="agenda-open-dot"></span><strong id="agenda-open-label">Carregando agenda…</strong><button id="agenda-toggle-open" class="text-button" type="button" disabled>Pausar</button></div><div class="agenda-toolbar-actions"><a id="agenda-open-public" class="button secondary" href="agenda.html" target="_blank" rel="noopener">Abrir agenda pública</a><button id="agenda-copy-link" class="button secondary" type="button">Copiar link público</button></div></div><input id="agenda-public-url" type="url" readonly hidden aria-label="Link público da agenda"><p id="agenda-admin-status" class="agenda-feedback" role="status"></p><p id="agenda-admin-error" class="error" role="alert"></p><div data-categorias-nav></div><section data-categoria-painel="calendario"><div class="agenda-workspace">
+  const le = `<div class="alana-agenda agenda-admin-native"><header class="agenda-native-header"><h1>Agenda</h1><p class="mod-sub">Organize os horários de atendimento e acompanhe as consultas online e presenciais.</p></header><section id="agenda-google-shortcut" class="agenda-google-shortcut" aria-labelledby="agenda-google-shortcut-title" hidden><div class="agenda-google-shortcut-copy"><span data-alana-icon="calendar" aria-hidden="true"></span><div><h2 id="agenda-google-shortcut-title">Conecte seu Google Agenda</h2><p id="agenda-google-shortcut-note">Traga seus compromissos para a agenda e evite conflitos de horário.</p></div></div><button id="agenda-google-shortcut-connect" class="button secondary" type="button" aria-describedby="agenda-google-shortcut-note">Conectar conta Google</button><p id="agenda-google-shortcut-error" class="error" role="alert"></p></section><section id="agenda-section"><div id="agenda-profile-bar" class="agenda-profile-bar" hidden><label>Agenda do perfil<select id="agenda-profile-select" aria-describedby="agenda-profile-note"></select></label><p id="agenda-profile-note" class="agenda-hint" role="status"></p></div><div class="agenda-toolbar"><div class="agenda-toolbar-state"><span id="agenda-open-dot" class="agenda-open-dot"></span><strong id="agenda-open-label">Carregando agenda…</strong><button id="agenda-toggle-open" class="text-button" type="button" disabled>Pausar</button></div><div class="agenda-toolbar-actions"><a id="agenda-open-public" class="button secondary" href="agenda.html" target="_blank" rel="noopener">Abrir agenda pública</a><button id="agenda-copy-link" class="button secondary" type="button">Copiar link público</button></div></div><input id="agenda-public-url" type="url" readonly hidden aria-label="Link público da agenda"><p id="agenda-admin-status" class="agenda-feedback" role="status"></p><p id="agenda-admin-error" class="error" role="alert"></p><div data-categorias-nav></div><section data-categoria-painel="calendario"><div class="agenda-workspace">
   <section class="admin-section agenda-calendar-card"><div class="agenda-month-heading"><div><p class="page-eyebrow">SEU CALENDÁRIO</p><h2 id="agenda-month-title">Agenda</h2></div><div class="agenda-date-nav"><button id="agenda-month-prev" class="agenda-nav-button" type="button" aria-label="Mês anterior"><span data-alana-icon="chevron-left"></span></button><button id="agenda-today" class="text-button" type="button">Hoje</button><button id="agenda-month-next" class="agenda-nav-button" type="button" aria-label="Próximo mês"><span data-alana-icon="chevron-right"></span></button></div></div><p class="agenda-calendar-hint">Clique em um dia para organizar os horários e ver as consultas.</p><div class="agenda-month-weekdays" aria-hidden="true"><span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span></div><div id="agenda-month-grid" class="agenda-month-grid" role="group" aria-label="Dias do mês"></div><div class="agenda-calendar-legend"><span><i class="agenda-legend-free"></i>Horários livres</span><span><i class="agenda-legend-booked"></i>Consultas</span><span><i class="agenda-legend-blocked"></i>Dia fechado</span></div></section>
   <section class="admin-section agenda-day-card"><div class="agenda-day-heading"><div><p class="page-eyebrow">DIA SELECIONADO</p><h2 id="agenda-selected-day">—</h2></div><button id="agenda-refresh" class="text-button" type="button" aria-label="Atualizar agenda">Atualizar</button></div><div class="agenda-day-counts"><span><strong id="agenda-day-free">0</strong> livres</span><span><strong id="agenda-day-reserved">0</strong> consultas</span><span><strong id="agenda-day-holds">0</strong> reservas internas</span></div><div id="agenda-admin-slots" class="agenda-day-slots"></div><div id="agenda-internal-holds" class="agenda-internal-holds"></div><div class="agenda-day-actions"><button id="agenda-reserve-day-time" class="button secondary" type="button">Reservar um intervalo</button><button id="agenda-add-day" class="button secondary" type="button">Abrir horários extras neste dia</button><button id="agenda-block-day" class="text-button" type="button">Reservar o dia inteiro</button></div><p id="agenda-day-note" class="agenda-hint"></p></section>
  </div>
@@ -79,6 +79,7 @@
         "agenda-refresh",
         "agenda-toggle-open",
         "agenda-google-connect",
+        "agenda-google-shortcut-connect",
         "agenda-google-disconnect",
         "agenda-block-day",
         "agenda-open-publish",
@@ -169,6 +170,52 @@
           : "Conectar minha conta Google"),
         (e("agenda-google-connect").disabled = p || !a.configured),
         (e("agenda-google-disconnect").hidden = !o || !a.email));
+      e("agenda-google-shortcut").hidden = a.connected || !o;
+      e("agenda-google-shortcut-title").textContent = a.email
+        ? "Reconecte seu Google Agenda"
+        : "Conecte seu Google Agenda";
+      e("agenda-google-shortcut-note").textContent = !a.configured
+        ? "A conexão com o Google está em preparação."
+        : a.email
+          ? "Autorize novamente sua conta para retomar a sincronização."
+          : "Traga seus compromissos para a agenda e evite conflitos de horário.";
+      window.AlanaIcons.content(
+        e("agenda-google-shortcut-connect"),
+        a.email ? "Reconectar conta Google" : "Conectar conta Google",
+        "arrow-up-right",
+        { trailing: true },
+      );
+      e("agenda-google-shortcut-connect").disabled = p || !a.configured;
+    }
+    async function connectGoogle(errorId) {
+      if (p || b || !i?.canConfigureGoogle || !i.google.configured) return;
+      const error = e(errorId);
+      if (h || S.dirty) {
+        error.textContent =
+          "Salve ou descarte suas alterações antes de conectar o Google.";
+        return;
+      }
+      const request = C;
+      q(true);
+      error.textContent = "";
+      try {
+        const flow = await x("adminGoogleStart");
+        if (request !== C) return;
+        if (new URL(flow.url).origin !== "https://accounts.google.com")
+          throw new Error("Endereço de autorização inválido.");
+        const target = window.AlanaGoogleFlow.save(
+          flow,
+          location.pathname + location.search,
+        );
+        location.assign(target);
+      } catch (failure) {
+        if (request === C) error.textContent = failure.message;
+      } finally {
+        if (request === C) {
+          q(false);
+          W();
+        }
+      }
     }
     function P(a, o, d = "secondary") {
       const t = document.createElement("button");
@@ -715,6 +762,8 @@
           (U = null),
           (T = a),
           (i = null),
+          (e("agenda-google-shortcut").hidden = true),
+          (e("agenda-google-shortcut-error").textContent = ""),
           (H = ""),
           (N = null),
           (G = null),
@@ -831,31 +880,12 @@
                 "Selecione e copie o link público."));
           }
       }),
-      r(e("agenda-google-connect"), "click", async () => {
-        if (p || b || !i?.google.configured) return;
-        if (h) {
-          e("agenda-google-error").textContent =
-            "Salve ou descarte as configurações antes de conectar o Google.";
-          return;
-        }
-        const a = C;
-        (q(!0), (e("agenda-google-error").textContent = ""));
-        try {
-          const o = await x("adminGoogleStart");
-          if (a !== C) return;
-          if (new URL(o.url).origin !== "https://accounts.google.com")
-            throw new Error("Endereço de autorização inválido.");
-          const t = window.AlanaGoogleFlow.save(
-            o,
-            location.pathname + location.search,
-          );
-          location.assign(t);
-        } catch (o) {
-          e("agenda-google-error").textContent = o.message;
-        } finally {
-          a === C && (q(!1), W());
-        }
-      }),
+      r(e("agenda-google-connect"), "click", () =>
+        connectGoogle("agenda-google-error"),
+      ),
+      r(e("agenda-google-shortcut-connect"), "click", () =>
+        connectGoogle("agenda-google-shortcut-error"),
+      ),
       r(e("agenda-google-disconnect"), "click", () => {
         if (h) {
           e("agenda-google-error").textContent =
@@ -927,11 +957,12 @@
           "agenda-slots-status",
           "agenda-google-status",
           "agenda-google-error",
+          "agenda-google-shortcut-error",
           "agenda-publish-error",
           "agenda-settings-error",
         ])
           e(a).textContent = "";
-        (M(""), q(!1));
+        ((e("agenda-google-shortcut").hidden = true), M(""), q(!1));
       },
     };
     return {

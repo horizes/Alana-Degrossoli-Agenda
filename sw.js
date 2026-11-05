@@ -1,5 +1,5 @@
 "use strict";
-const VERSION='b46b6dd6eba3',
+const VERSION='226a1a598c6e',
   PREFIX = "alana-agenda-static-",
   CACHE = PREFIX + VERSION;
 const FILES = [

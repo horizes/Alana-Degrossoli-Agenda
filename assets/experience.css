@@ -1048,3 +1048,68 @@
     font-size: 27px;
   }
 }
+
+/* Conexão Google disponível no início do painel até a conta ser vinculada. */
+.alana-agenda .agenda-google-shortcut {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px 26px;
+  margin: 0 0 26px;
+  padding: 20px 22px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: 3px;
+}
+.alana-agenda .agenda-google-shortcut[hidden] {
+  display: none;
+}
+.alana-agenda .agenda-google-shortcut-copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+.alana-agenda .agenda-google-shortcut-copy > svg {
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+  flex: 0 0 22px;
+  color: var(--gold);
+}
+.alana-agenda .agenda-google-shortcut h2 {
+  margin: 0 0 5px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.alana-agenda .agenda-google-shortcut p:not(.error) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.alana-agenda .agenda-google-shortcut .error {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.alana-agenda .agenda-google-shortcut .error:empty {
+  display: none;
+}
+.alana-agenda .agenda-google-shortcut .button {
+  white-space: nowrap;
+}
+@media (max-width: 620px) {
+  .alana-agenda .agenda-google-shortcut {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px;
+  }
+  .alana-agenda .agenda-google-shortcut h2 {
+    font-size: 21px;
+  }
+  .alana-agenda .agenda-google-shortcut .button {
+    width: 100%;
+  }
+}
