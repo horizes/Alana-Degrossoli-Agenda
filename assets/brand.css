@@ -1,34 +1,34 @@
 @font-face {
-  font-family: "Alegreya";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/alegreya-italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Alegreya";
+  font-family: "Alegreya Sans";
   font-style: normal;
-  font-weight: 400 600;
+  font-weight: 300;
   font-display: swap;
-  src: url("../fonts/alegreya-regular.woff2") format("woff2");
+  src: url("../fonts/alegreya-sans-300.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/lato-regular.woff2") format("woff2");
+  src: url("../fonts/alegreya-sans-400.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/alegreya-sans-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/lato-bold.woff2") format("woff2");
+  src: url("../fonts/alegreya-sans-700.woff2") format("woff2");
 }
 /* Alana Degrossoli — cores observadas nas publicações oficiais. */
 .alana-agenda {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
   --cream: #36282b;
   --ink: #faf6f2;
   --panel: #fffdfa;
@@ -72,11 +72,11 @@
 }
 .agenda-login-intro h1 {
   color: #36282b;
-  font-family: "Alegreya", Georgia, serif;
-  font-size: clamp(48px, 4.9vw, 66px);
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  font-size: clamp(42px, 4.3vw, 56px);
   font-weight: 400;
-  letter-spacing: -1.1px;
-  line-height: 1.1;
+  letter-spacing: -0.35px;
+  line-height: 1.16;
   margin: 22px 0 24px;
 }
 .agenda-login-intro h1 em {
@@ -135,7 +135,7 @@
 .agenda-professional strong {
   display: block;
   color: #6e2634;
-  font-family: "Alegreya", Georgia, serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
 }
@@ -168,11 +168,11 @@
   padding: 36px;
 }
 .agenda-login-card h2 {
-  font-family: "Alegreya", Georgia, serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #36282b;
-  letter-spacing: -0.8px;
+  letter-spacing: 0;
 }
 .agenda-login-card input:not([type="checkbox"]) {
   background: #fffdfa;
@@ -236,11 +236,11 @@
   min-height: 44px;
 }
 .agenda-page .agenda-intro h1 {
-  font-family: "Alegreya", Georgia, serif;
-  font-size: clamp(38px, 4.6vw, 55px);
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  font-size: clamp(32px, 3.8vw, 44px);
   font-weight: 400;
   color: #6e2634;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.3px;
 }
 .agenda-page .agenda-intro p:not(.page-eyebrow):not(.agenda-profile-public) {
   font-size: 14px;
@@ -248,7 +248,7 @@
 }
 .agenda-page .agenda-form-heading h2,
 .agenda-contact-card h2 {
-  font-family: "Alegreya", Georgia, serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
   font-size: 28px;
   font-weight: 400;
   color: #36282b;
@@ -287,7 +287,7 @@
   padding: 16px 0;
 }
 .agenda-guide h1 {
-  font-family: "Alegreya", Georgia, serif;
+  font-family: "Alegreya Sans", Arial, sans-serif;
   font-size: 42px;
   color: #6e2634;
   font-weight: 400;
@@ -305,7 +305,7 @@
     grid-template-columns: minmax(0, 1fr) 360px;
   }
   .agenda-login-intro h1 {
-    font-size: 57px;
+    font-size: 48px;
   }
   .agenda-login-tags {
     flex-wrap: wrap;
@@ -334,8 +334,8 @@
     margin: 30px auto 38px;
   }
   .agenda-login-intro h1 {
-    font-size: 54px;
-    letter-spacing: -2px;
+    font-size: 43px;
+    letter-spacing: -0.25px;
     margin-top: 16px;
   }
   .agenda-login-intro > p:not(.page-eyebrow) {
@@ -380,7 +380,7 @@
     display: none;
   }
   .agenda-page .agenda-intro h1 {
-    font-size: 37px;
+    font-size: 34px;
   }
   .agenda-contact-card {
     padding: 25px 20px;
@@ -400,7 +400,7 @@
     width: 190px;
   }
   .agenda-login-intro h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
@@ -426,4 +426,108 @@
 }
 .agenda-page .agenda-intro p:not(.page-eyebrow):not(.agenda-profile-public) {
   font-size: 16px;
+}
+
+/* Uma família humanista, com curvas suaves e sem a composição editorial em itálico. */
+.agenda-login-intro h1 {
+  font-weight: 300;
+  max-width: 460px;
+}
+.agenda-login-intro h1 em {
+  font-style: normal;
+}
+.agenda-login-intro .page-eyebrow {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-size: 13px;
+}
+.agenda-login-intro > p:not(.page-eyebrow) {
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 420px;
+}
+.agenda-login-card h2 {
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.agenda-login-card > div > p:not(.page-eyebrow) {
+  font-size: 16px;
+}
+.agenda-login-card .page-eyebrow {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.agenda-login-card label {
+  font-size: 14px;
+  font-weight: 400;
+}
+.agenda-login-card input:not([type="checkbox"]) {
+  font-size: 16px;
+}
+.agenda-patient-link {
+  font-size: 15px;
+  font-weight: 500;
+}
+.agenda-professional strong {
+  font-size: 23px;
+  font-weight: 400;
+}
+.agenda-professional span,
+.agenda-professional a {
+  font-size: 12px;
+}
+.agenda-brand-values {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.agenda-login-tags > span {
+  font-size: 12px;
+}
+.agenda-shell-product {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.agenda-guide-link {
+  font-size: 13px;
+  font-weight: 400;
+}
+.agenda-page .agenda-intro h1 {
+  font-weight: 300;
+  line-height: 1.18;
+}
+.agenda-page .agenda-form-heading h2,
+.agenda-contact-card h2 {
+  font-weight: 400;
+  font-size: 27px;
+}
+.agenda-guide h1 {
+  font-weight: 300;
+  letter-spacing: 0;
+}
+.alana-agenda .button {
+  font-weight: 500;
+}
+@media (max-width: 720px) {
+  .agenda-login-intro h1 {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+  .agenda-login-intro .page-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .agenda-login-intro > p:not(.page-eyebrow) {
+    font-size: 16px;
+  }
+  .agenda-brand-values {
+    font-size: 11px;
+  }
+  .agenda-guide-link {
+    font-size: 11px;
+  }
+  .agenda-login-card h2 {
+    font-size: 27px;
+  }
 }

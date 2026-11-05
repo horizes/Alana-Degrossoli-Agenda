@@ -1,12 +1,12 @@
 "use strict";
-const VERSION='4d4bd208c718',
+const VERSION='b46b6dd6eba3',
   PREFIX = "alana-agenda-static-",
   CACHE = PREFIX + VERSION;
 const FILES = [
-  "fonts/alegreya-italic.woff2",
-  "fonts/alegreya-regular.woff2",
-  "fonts/lato-bold.woff2",
-  "fonts/lato-regular.woff2",
+  "fonts/alegreya-sans-300.woff2",
+  "fonts/alegreya-sans-400.woff2",
+  "fonts/alegreya-sans-500.woff2",
+  "fonts/alegreya-sans-700.woff2",
   "offline.html",
   "manual.html",
   "privacidade-agenda.html",
@@ -22,6 +22,8 @@ const FILES = [
   "apple-touch-icon.png",
   "assets/style.css",
   "assets/brand.css",
+  "assets/experience.css",
+  "assets/interface.js",
   "assets/setup.js",
   "brand/alana-retrato.jpg",
   "assets/icons.js",

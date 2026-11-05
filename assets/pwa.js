@@ -42,15 +42,28 @@
       },
       !0,
     ));
+  let installed = false;
+  const canInstall = () =>
+    document.body.classList.contains("agenda-signed-in") && !installed && !u();
   const t = document.createElement("button");
   ((t.type = "button"),
     (t.className = "agenda-install-button"),
     (t.textContent = "Instalar aplicativo"),
-    (t.hidden = u()));
+    (t.hidden = true));
   const v = document.querySelector("footer");
   v && v.append(t);
   const d = document.createElement("dialog");
   d.className = "agenda-dialog agenda-install-dialog";
+  function updateInstallVisibility() {
+    t.hidden = !canInstall();
+    if (t.hidden && d.open) d.close();
+  }
+  const installObserver = new MutationObserver(updateInstallVisibility);
+  installObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  updateInstallVisibility();
   const f = document.createElement("h2");
   f.textContent = "Alana na sua tela inicial";
   const g = document.createElement("p");
@@ -71,6 +84,7 @@
     d.append(f, g, l, c),
     document.body.append(d),
     t.addEventListener("click", async () => {
+      if (!canInstall()) return;
       if (i) {
         const e = i;
         ((i = null),
@@ -79,10 +93,10 @@
       } else d.showModal();
     }),
     window.addEventListener("beforeinstallprompt", (e) => {
-      (e.preventDefault(), (i = e), u() || (t.hidden = !1));
+      (e.preventDefault(), (i = e), updateInstallVisibility());
     }),
     window.addEventListener("appinstalled", () => {
-      ((i = null), (t.hidden = !0));
+      ((i = null), (installed = true), updateInstallVisibility());
     }),
     a.addEventListener("click", () => {
       !r?.waiting ||

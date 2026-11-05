@@ -61,7 +61,7 @@
         window.AlanaIcons.content(e("agenda-password-toggle"), "", "eye"),
         (d = !1),
         (t.disabled = !1),
-        window.AlanaIcons.content(t, "Acessar agenda", "arrow-right", {
+        window.AlanaIcons.content(t, "Entrar na agenda", "arrow-right", {
           trailing: !0,
         }));
     }

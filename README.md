@@ -2,7 +2,9 @@
 
 [Abra a agenda](https://horizes.github.io/Alana-Degrossoli-Agenda/) · [Página de agendamento](https://horizes.github.io/Alana-Degrossoli-Agenda/agenda.html)
 
-Agenda adaptada da Solvex para consultas de nutrição funcional. A paleta em vinho e creme foi mantida; os títulos usam Alegreya e os textos Lato, com fontes hospedadas no próprio site.
+Agenda adaptada da Solvex para consultas de nutrição funcional. A paleta em vinho e creme foi mantida; os títulos e textos usam Alegreya Sans, com fontes hospedadas no próprio site. A composição mantém a apresentação à esquerda e o acesso em um painel à direita, com retrato real, títulos sem itálico e navegação direta.
+
+O agendamento mostra um resumo do horário selecionado e o avanço das etapas. A opção de instalar o aplicativo aparece somente depois do login.
 
 ## Funcionamento
 

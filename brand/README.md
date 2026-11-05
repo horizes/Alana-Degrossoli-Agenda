@@ -11,4 +11,9 @@ Referência: [perfil oficial de Alana Degrossoli](https://www.instagram.com/alan
 
 O WhatsApp `+55 19 99811-7117` foi conferido nos links de consultas presenciais e online do [Linktree oficial](https://linktr.ee/alanadegrossoli).
 
-Tipografia revisada: Alegreya nos títulos e Lato nos textos e controles. As fontes são locais, com licenças OFL em `fonts/`.
+Tipografia: Alegreya Sans em títulos, textos e controles. Títulos mais leves, sem itálico e com menos maiúsculas. Fontes locais e licença OFL em `fonts/`.
+
+
+A revisão visual combina a hierarquia da primeira versão com tipografia humanista, fotografia própria e controles de agenda. Painéis têm bordas discretas e pouco arredondamento. O movimento é breve e funcional, com alternativa sem animação para `prefers-reduced-motion`.
+
+Referência de pesquisa: [AI Prototyping in Real Design Contexts, NN/g](https://www.nngroup.com/articles/ai-prototyping/), sobre hierarquia, agrupamento e padrões genéricos. A composição foi adaptada à tarefa de agendar consultas, sem incorporar imagens do estudo ao produto.

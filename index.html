@@ -23,20 +23,29 @@
     <link rel="icon" href="favicon.svg" />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="assets/brand.css" />
+    <link rel="stylesheet" href="assets/experience.css" />
   </head>
   <body class="alana-agenda agenda-portal">
     <a class="skip-link" href="#agenda-root">Ir para a agenda</a>
     <header class="agenda-shell-header">
-      <a href="./" aria-label="Alana Agenda"
-        ><img src="brand/alana-logo.svg" alt="Alana Degrossoli" /></a
-      ><span class="agenda-shell-product">AGENDA DE CONSULTAS</span
-      ><a
-        class="agenda-guide-link"
-        href="manual.html"
-        target="_blank"
-        rel="noopener"
-        >Guia da equipe <span data-alana-icon="arrow-up-right"></span
-      ></a>
+      <a href="./" aria-label="Alana Degrossoli · Agenda"
+        ><img
+          src="brand/alana-logo.svg"
+          alt="Alana Degrossoli · Nutricionista Funcional"
+          width="268"
+          height="50"
+      /></a>
+      <nav class="agenda-site-nav" aria-label="Navegação principal">
+        <a href="agenda.html"
+          >Agendar consulta <span data-alana-icon="arrow-up-right"></span></a
+        ><a
+          href="manual.html"
+          class="agenda-guide-link"
+          target="_blank"
+          rel="noopener"
+          >Guia da equipe</a
+        >
+      </nav>
       <div id="agenda-account" hidden>
         <span id="agenda-account-name"></span
         ><button class="button secondary" id="agenda-signout" type="button">
@@ -44,54 +53,57 @@
         </button>
       </div>
     </header>
-    <main id="agenda-login" class="agenda-login">
-      <section class="agenda-login-intro">
-        <p class="page-eyebrow">NUTRIÇÃO FUNCIONAL · ALANA DEGROSSOLI</p>
-        <h1>O resultado<br />começa na <em>raiz.</em></h1>
-        <p>
-          Cuidado que respeita sua história, seus objetivos<br />e o seu tempo.
-          Uma consulta de cada vez.
+    <main id="agenda-login" class="agenda-login agenda-login-balanced">
+      <section class="agenda-login-intro" aria-labelledby="agenda-intro-title">
+        <p class="page-eyebrow">Nutrição funcional · Alana Degrossoli</p>
+        <h1 class="agenda-balanced-title" id="agenda-intro-title">
+          O resultado<br />começa na raiz.
+        </h1>
+        <p class="agenda-balanced-copy">
+          Atendimento online e presencial, com um cuidado que acompanha a sua
+          rotina.
         </p>
-        <a class="agenda-patient-link" href="agenda.html"
-          >Quero agendar minha consulta
-          <span data-alana-icon="arrow-up-right"></span
+        <a class="agenda-balanced-appointment" href="agenda.html"
+          >Agende sua consulta <span data-alana-icon="arrow-up-right"></span
         ></a>
-        <div class="alana-hero-line" aria-hidden="true"></div>
-        <div class="agenda-login-tags">
-          <span
-            ><span data-alana-icon="calendar"></span>Horários organizados</span
-          ><span><span data-alana-icon="video"></span>Online e presencial</span
-          ><span><span data-alana-icon="clock"></span>Google Agenda</span>
-        </div>
-        <div class="agenda-professional">
+        <figure class="agenda-studio-portrait">
           <img
             src="brand/alana-retrato.jpg"
-            alt="Alana Degrossoli, nutricionista funcional"
-            width="92"
-            height="112"
+            alt="Alana Degrossoli"
+            width="360"
+            height="640"
+            fetchpriority="high"
           />
-          <div>
-            <strong>Alana Degrossoli</strong><span>Nutricionista Funcional</span
-            ><a
-              href="https://www.instagram.com/alanadegrossoli/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@alanadegrossoli</a
-            >
-          </div>
-        </div>
-        <div class="agenda-brand-values">
-          EMAGRECIMENTO <span>·</span> PERFORMANCE <span>·</span> LONGEVIDADE
-        </div>
+          <figcaption>
+            <div>
+              <h2>Alana Degrossoli</h2>
+              <p>Nutricionista Funcional</p>
+              <a
+                class="agenda-balanced-instagram"
+                href="https://www.instagram.com/alanadegrossoli/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@alanadegrossoli</a
+              >
+            </div>
+          </figcaption>
+        </figure>
+        <p class="agenda-balanced-specialties">
+          Emagrecimento <span>·</span> Performance <span>·</span> Longevidade
+        </p>
       </section>
-      <section class="agenda-login-card">
+      <section class="agenda-login-card" aria-labelledby="agenda-access-title">
         <div id="agenda-login-loading" role="status">
           Verificando seu acesso…
         </div>
         <div id="agenda-login-fields" hidden>
-          <p class="page-eyebrow">ÁREA DA NUTRICIONISTA</p>
-          <h2>Entre na sua agenda.</h2>
-          <p>Acesse seus horários e acompanhe os atendimentos.</p>
+          <div class="agenda-access-heading">
+            <p class="page-eyebrow">Área profissional</p>
+            <h2 id="agenda-access-title">Entre na sua agenda.</h2>
+            <p>
+              Entre para organizar seus horários e acompanhar os atendimentos.
+            </p>
+          </div>
           <form id="agenda-login-form">
             <label
               >E-mail<input
@@ -122,13 +134,11 @@
             ><label class="agenda-remember"
               ><input type="checkbox" name="remember" />Manter conectado</label
             ><button class="button primary" type="submit">
-              Acessar agenda <span data-alana-icon="arrow-right"></span>
+              Entrar na agenda <span data-alana-icon="arrow-right"></span>
             </button>
             <p class="error" id="agenda-login-error" role="alert"></p>
           </form>
-          <p class="agenda-login-contact">
-            Ambiente de demonstração · utilize dados fictícios nos testes.
-          </p>
+          <p class="agenda-login-contact">Conta de demonstração.</p>
         </div>
       </section>
     </main>
@@ -139,8 +149,7 @@
       tabindex="-1"
     ></main>
     <footer class="agenda-shell-footer">
-      <span>© Alana Degrossoli · Nutricionista Funcional</span
-      ><span>O resultado começa na raiz.</span
+      <span>Alana Degrossoli · Nutricionista Funcional</span
       ><a href="privacidade-agenda.html">Privacidade</a>
     </footer>
     <script src="config.js" defer></script>
@@ -154,5 +163,6 @@
     <script src="assets/portal.js" defer></script>
     <script src="assets/pwa.js" defer></script>
     <script src="assets/setup.js" defer></script>
+    <script src="assets/interface.js" defer></script>
   </body>
 </html>
